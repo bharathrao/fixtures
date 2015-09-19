@@ -1,0 +1,25 @@
+{
+  "name": "fixtures",
+  "version": "1.0.0",
+  "description": "Automatically find fixtures",
+  "main": "index.js",
+  "scripts": {
+    "test": "node specs/fixtures.specs.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bharathrao/fixtures.git"
+  },
+  "keywords": [
+    "fixtures",
+    "TDD",
+    "BDD",
+    "expect.js"
+  ],
+  "author": "bharathrao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bharathrao/fixtures/issues"
+  },
+  "homepage": "https://github.com/bharathrao/fixtures#readme"
+}
