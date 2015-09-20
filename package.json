@@ -1,5 +1,5 @@
 {
-  "name": "fixtures",
+  "name": "fixtures.js",
   "version": "1.0.0",
   "description": "Automatically find fixtures",
   "main": "index.js",

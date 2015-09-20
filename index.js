@@ -1,4 +1,7 @@
-var dirs   = module.parent.filename.split('/')
-var specfile = dirs.pop()
-dirs.push('fixtures', specfile + 'on')
-module.exports = require(dirs.join('/'))
+function getFixture(filename) {
+  var dirs   = filename.split('/')
+  var specfile = dirs.pop()
+  dirs.push('fixtures', specfile + 'on')
+  return require(dirs.join('/'))
+}
+module.exports = getFixture
