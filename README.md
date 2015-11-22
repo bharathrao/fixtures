@@ -1,7 +1,9 @@
 # fixtures.js
+
 Automatically load fixtures for tests from corresponding json files in the fixtures directory
 
 ### Fixtures files
+
 A fixtures file is a JSON file with the same name as your test file but a .json extension.
 
 Examples:
@@ -12,6 +14,7 @@ feature1.js| feature1.json
 feature2.spec.js|feature2.spec.json
 
 ### Location of fixtures file
+
 Fixtures files can be placed in the following locations:
 
  1. Same directory as the test file
@@ -25,6 +28,7 @@ For example, if the test file is at the following location:
 ```
 
 The fixtures file may be located at the following locations (in priority order)
+
 Priority | Fixtures file path
 ----------------|-----------------
 1| /home/dude/projects/coolthing/specs/server/feature1/feature1.specs.json
@@ -35,9 +39,8 @@ Priority | Fixtures file path
 
 # Usage
 
-### Example fixtures file
+### specs/features/fixtures/drwho.specs.json
 
-#### specs/features/fixtures/drwho.specs.json
 ```
 {
 	"name": "Dr. Who",
@@ -45,7 +48,8 @@ Priority | Fixtures file path
 }
 ```
 
-#### specs/features/drwho.specs.js
+### specs/features/drwho.specs.js
+
 ```javascript
 var expect   = require('expect.js')
 var fixtures = require('fixtures.js') // Automatically figure out filename and load
