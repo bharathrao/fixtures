@@ -1,7 +1,21 @@
-function getFixture(filename) {
-  var dirs   = filename.split('/')
+var fs = require('fs')
+var path = require('path')
+
+module.exports = (function getFixture() {
+  var filename = module.parent.filename
+  var dirs   = filename.split(path.sep)
   var specfile = dirs.pop()
-  dirs.push('fixtures', specfile + 'on')
-  return require(dirs.join('/'))
-}
-module.exports = getFixture
+  var parsed   = path.parse(specfile)
+  var fixtures = parsed.name + '.json'
+  dirs.push(fixtures)
+  var fixturesPath = dirs.join(path.sep)
+  if(fs.existsSync(fixturesPath)) return require(fixturesPath)
+  dirs.pop()
+  while(dirs.length > 0) {
+    dirs.push('fixtures', fixtures)
+    var fixturesPath = dirs.join(path.sep)
+    if(fs.existsSync(fixturesPath)) return require(fixturesPath)
+    dirs.pop(); dirs.pop(); dirs.pop()
+  }
+  return undefined
+})()
