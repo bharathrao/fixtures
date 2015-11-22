@@ -52,7 +52,7 @@ Priority | Fixtures file path
 
 ```javascript
 var expect   = require('expect.js')
-var fixtures = require('fixtures.js') // Automatically figure out filename and load
+var fixtures = require('fixtures.js')(__filename) // Automatically figure out filename and load
 
 describe('Show attributes', function() {
   it('should get title', function() {

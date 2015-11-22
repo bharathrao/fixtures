@@ -1,10 +1,10 @@
 {
   "name": "fixtures.js",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "Automatically find fixtures",
   "main": "index.js",
   "scripts": {
-    "test": "for i in specs/*.specs.js; do node $i; done"
+    "test": "mocha specs/*.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/bharathrao/fixtures/issues"
   },
-  "homepage": "https://github.com/bharathrao/fixtures#readme"
+  "homepage": "https://github.com/bharathrao/fixtures#readme",
+  "devDependencies": {
+    "expect.js": "^0.3.1"
+  }
 }
